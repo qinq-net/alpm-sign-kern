@@ -1,0 +1,14 @@
+#!/bin/sh
+
+run() {
+	echo "==> $*"
+	"$@"
+}
+main() {
+	local kver="$1"; shift
+	local keypath="/etc/sign-kern"
+	#echo "sbsign --key $keypath/db.key --cert $keypath/db.crt --output /boot/$kver /boot/$kver"
+	run sbsign --key "$keypath/db.key" --cert "$keypath/db.crt" --output "/boot/$kver" "/boot/$kver"
+}
+main "$@"
+

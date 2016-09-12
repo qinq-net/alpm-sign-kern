@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = boot/vmlinuz-*
+
+[Action]
+Description = Sign Kernel with Local Key
+Depends = sbsigntools 
+When = PostTransaction
+Exec = /bin/sh -c 'while read -r f;do f=$(basename "$f");/usr/lib/sign-kern/alpm-hook $f;done'
+NeedsTargets

@@ -1,0 +1,15 @@
+pkgbase = sign-kern
+	pkgdesc = Sign Kernel with Local Key "/etc/sign-kern/db.key\"
+	pkgver = 0.1
+	pkgrel = 1
+	arch = any
+	license = custom:BSD
+	depends = sbsigntools
+	provides = sign-kern
+	source = alpm-hook
+	source = kernel-sign.hook
+	sha256sums = 86f1699014feaa83cfc4d22f6e2b44f6b7dfc9a7cf10ddd055ed698834ff081b
+	sha256sums = e60bea2a93b33131e6d8c9f7212a410ce6ea434ca75f75e304669d96a87c150e
+
+pkgname = sign-kern
+
