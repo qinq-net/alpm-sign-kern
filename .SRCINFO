@@ -1,7 +1,7 @@
 pkgbase = sign-kern
 	pkgdesc = Sign Kernel with Local Key "/etc/sign-kern/db.key\"
 	pkgver = 0.1
-	pkgrel = 1
+	pkgrel = 2
 	arch = any
 	license = custom:BSD
 	depends = sbsigntools
