@@ -1,7 +1,7 @@
 # $Id$
 pkgname=sign-kern
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc='Sign Kernel with Local Key "/etc/sign-kern/db.key\"'
 url=
 license=('custom:BSD')
@@ -21,6 +21,7 @@ backup=()
 package() {
 	cd "${srcdir}"
 	install -d "${pkgdir}/etc/sign-kern"
+	chmod 400 "${pkgdir}/etc/sign-kern"
 	install -Dm755 alpm-hook "${pkgdir}/usr/lib/sign-kern/alpm-hook"
 	install -Dm644 kernel-sign.hook "${pkgdir}/usr/share/libalpm/hooks/kernel-sign.hook"
 }
